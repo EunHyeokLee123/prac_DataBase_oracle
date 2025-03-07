@@ -101,6 +101,11 @@ SELECT * FROM user_constraints
 WHERE table_name = 'DEPT';  -- 테이블명은 대문자로 작성해야함.
 
 
+-- 제약 조건 삭제(제약 조건 이름으로 -> 짓지 않았다면 오라클이 부여한 이름을 제시)
+ALTER TABLE dept
+DROP CONSTRAINT dept2_bonus_ck;
+
+SELECT * FROM dept;
 
 
 
