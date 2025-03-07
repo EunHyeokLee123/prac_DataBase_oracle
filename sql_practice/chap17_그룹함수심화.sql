@@ -50,10 +50,13 @@ GROUP BY GROUPING SETS (department_id, job_id)
 ORDER BY department_id
 ;
 
+<<<<<<< HEAD
 -- GROUPING(): 이 함수가 직접 그룹 집계를 하지는 않음.
 -- 결과에서 특정 열이 집계가 되었는지의 여부를 확인하여 값을 임의로 집어 넣을때 사용.
 -- ROLLUP, CUBE, GROUPING SETS에서 모두 사용 가능.
 
+=======
+>>>>>>> prac/main
 SELECT
     CASE GROUPING(department_id) WHEN 1 THEN 0  -- NULL로 작성되는 컬럼을 없애기 위해
     ELSE department_id END AS dept_id,              -- NULL 대신 9999를 입력
