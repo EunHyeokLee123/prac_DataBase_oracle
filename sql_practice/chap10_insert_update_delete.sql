@@ -81,3 +81,8 @@ WHERE employee_id = 101;
 
 DELETE FROM emps
 WHERE employee_id = 101;
+
+-- DELETE (서브쿼리)
+DELETE FROM emps
+WHERE department_id = (SELECT department_id FROM departments
+                        WHERE department_name = 'IT');

@@ -52,6 +52,7 @@ concat(first_name, last_name),
 salary
 FROM employees
 WHERE salary > 10000
+ORDER BY salary DESC
 ;
 
 --7. 보너스를 받는 사원의 이름과 직무, 보너스율을 출력하세요.
@@ -61,7 +62,7 @@ concat(first_name, last_name),
 job_id,
 commission_pct
 FROM employees
-where commission_pct > 0
+where commission_pct IS NOT NULL 
 ;
 
 --8. 2003년도 입사한 사원의 이름과 입사일 그리고 급여를 출력하세요.(BETWEEN 연산자 사용)
